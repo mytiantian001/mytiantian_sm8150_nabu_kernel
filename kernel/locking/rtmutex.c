@@ -1654,7 +1654,7 @@ static void rt_mutex_handle_deadlock(int res, int detect_deadlock,
 	/*
 	 * Yell lowdly and stop the task right here.
 	 */
-	rt_mutex_print_deadlock(w);
+	WARN(1, "rtmutex deadlock detected\n");
 	while (1) {
 		set_current_state(TASK_INTERRUPTIBLE);
 		schedule();
