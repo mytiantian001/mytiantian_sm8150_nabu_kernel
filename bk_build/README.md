@@ -1,5 +1,8 @@
 # nabu Android 17 kernel build
 
+Kernel release: `4.14.357_bk-Kernel_17.0-Panz-mytiantian`, based on OpenELA
+`v4.14.357-openela` with the nabu Android/QCOM changes.
+
 The default entry point is `nabu_defconfig`. The scripts do not flash, reboot,
 change swap, or touch a connected device.
 
