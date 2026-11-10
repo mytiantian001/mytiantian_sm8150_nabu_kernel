@@ -2,7 +2,7 @@
 set -eu
 
 SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
-OUT_DIR=${OUT_DIR:-/home/rinnrei/Project/uwuAP-temp/out/nabu-4.14.336-Pan}
+OUT_DIR=${OUT_DIR:-/home/rinnrei/Project/uwuAP-temp/out/nabu-4.14.357-Panz-mytiantian}
 ARTIFACTS=${ARTIFACTS:-$OUT_DIR/artifacts}
 PACKAGE_ROOT=${PACKAGE_ROOT:-$OUT_DIR/packages}
 TEMPLATE=$SCRIPT_DIR/anykernel.sh
@@ -76,7 +76,7 @@ unzip -p "$ZIP_PATH" anykernel.sh | grep -Fx 'device.name1=nabu' >/dev/null || {
   echo "AnyKernel target is not nabu" >&2; exit 1;
 }
 unzip -p "$ZIP_PATH" anykernel.sh | \
-  grep -Fx "kernel.string=RinnRei's bk-Kernel / CoolApk @零音Rei" >/dev/null || {
+  grep -Fx "kernel.string=mytiantian's bk-Kernel / OpenELA 4.14.357" >/dev/null || {
   echo "AnyKernel kernel.string is incorrect" >&2; exit 1;
 }
 for required in \

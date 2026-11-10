@@ -16,7 +16,7 @@ uwuAOSP Clang and the nabu GCC prebuilts. `nabu-perf_defconfig` is not a
 supported default because it does not select `CONFIG_MACH_XIAOMI_NABU`.
 
 Package names include the kernel release suffix:
-`bk-Kernel_nabu-A17-Hyper-Pan-HHMMSS.zip`. The ZIP contains only
+`bk-Kernel_nabu-A17-Hyper-mytiantian-HHMMSS.zip`. The ZIP contains only
 files consumed by the kernel installer. `build-module.sh` can also independently compile
 the ARM64 helpers and creates `bkk-control-1.0-HHMMSS.zip` in the same
 `out/packages/` directory. Module metadata stays under `module-artifacts/`;

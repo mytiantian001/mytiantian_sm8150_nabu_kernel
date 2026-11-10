@@ -124,7 +124,7 @@ jobs:
         run: |
           set -euo pipefail
           package=$(find "$OUT_DIR/packages" -maxdepth 1 -type f \
-            -name 'bk-Kernel_nabu-A17-Hyper-Panz-*.zip' -print -quit)
+            -name 'bk-Kernel_nabu-A17-Hyper-mytiantian-*.zip' -print -quit)
           module=$(find "$OUT_DIR/packages" -maxdepth 1 -type f \
             -name 'bkk-control-*.zip' -print -quit)
           test -n "$package"
@@ -155,7 +155,7 @@ jobs:
       - name: 上传内核产物
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: bk-Kernel_nabu-A17-Hyper-Panz
+          name: bk-Kernel_nabu-A17-Hyper-mytiantian
           path: |
             ${{ steps.package.outputs.package }}
             ${{ steps.package.outputs.checksum }}
@@ -194,7 +194,7 @@ jobs:
           fi
           notes="${RUNNER_TEMP}/release-notes.md"
           {
-            echo "Kernel: 4.14.336_bk-Kernel_17.0-Panz"
+            echo "Kernel: 4.14.357_bk-Kernel_17.0-Panz-mytiantian"
             echo "Target: Xiaomi Pad 5 (nabu)"
             echo "Build: GitHub Actions run ${GITHUB_RUN_NUMBER}"
             echo "Commit: ${GITHUB_SHA}"

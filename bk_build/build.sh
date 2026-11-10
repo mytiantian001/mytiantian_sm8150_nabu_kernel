@@ -9,7 +9,7 @@ else
 fi
 ARCH=${ARCH:-arm64}
 DEFCONFIG=${DEFCONFIG:-nabu_defconfig}
-OUT_DIR=${OUT_DIR:-/home/rinnrei/Project/uwuAP-temp/out/nabu-4.14.336-Pan}
+OUT_DIR=${OUT_DIR:-/home/rinnrei/Project/uwuAP-temp/out/nabu-4.14.357-Panz-mytiantian}
 JOBS=${JOBS:-${JOB:-4}}
 CLANG_DIR=${CLANG_DIR:-/home/rinnrei/Project/uwuAOSP/prebuilts/clang/host/linux-x86/clang-r547379}
 GCC64_DIR=${GCC64_DIR:-/home/rinnrei/Project/uwuAP-temp/toolchains/nabu/gcc64}
@@ -243,7 +243,7 @@ grep -Eq '(^|[[:space:]])pid[[:space:]]*;' \
   echo "BTF task_struct::pid is missing" >&2; exit 1;
 }
 kernel_release=$(make_kernel -s kernelrelease)
-[ "$kernel_release" = "4.14.336_bk-Kernel_17.0-Panz" ] || {
+[ "$kernel_release" = "4.14.357_bk-Kernel_17.0-Panz-mytiantian" ] || {
   echo "unexpected kernel release: $kernel_release" >&2; exit 1;
 }
 
